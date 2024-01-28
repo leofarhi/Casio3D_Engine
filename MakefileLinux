@@ -1,0 +1,12 @@
+#Linux COMPILATION
+CC = gcc
+CFLAGS += `pkg-config --cflags sdl2 SDL2_image SDL2_ttf` -I Libs/List -I Libs/Tuple -DLINUX_MODE
+LDLIBS += `pkg-config --libs sdl2 SDL2_image SDL2_ttf` -L Libs/List -L Libs/Tuple -lm
+
+linux_mode: ${OBJ}
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJ) $(LDLIBS)
+
+
+$(foreach f, $(TARGET), $(eval $(f):))
+
+-include ${DEP}

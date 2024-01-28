@@ -1,0 +1,7 @@
+icon-uns.png:
+  name: IMG_ASSET_2760a62854eb40608c98bc27f219558e
+  type: bopti-image
+  profile: p4_rgb565a
+
+i
+i

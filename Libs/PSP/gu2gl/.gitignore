@@ -51,9 +51,7 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-bin/*
-assets-ds/*
-assets-cg/*
-assets-fx/*
-build/*
-assets/Sources/*
+.vscode
+*.PBP
+*.SFO
+*.prx

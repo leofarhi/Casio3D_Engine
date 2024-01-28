@@ -1,0 +1,20 @@
+Block.png:
+  name: IMG_ASSET_bf6c052f2b9e40858f1017634849e2e1
+  type: bopti-image
+  profile: rgb565a
+
+Players.png:
+  name: IMG_ASSET_2a5eaf758a7f449f8457705602c98351
+  type: bopti-image
+  profile: p8
+
+Shadow.png:
+  name: IMG_ASSET_8d515b2d28494d9c84dc185cf93ab76d
+  type: bopti-image
+  profile: p4
+
+UI.png:
+  name: IMG_ASSET_3e3a11dd22b64ed3a175866573390630
+  type: bopti-image
+  profile: rgb565a
+

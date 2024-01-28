@@ -1,0 +1,16 @@
+#WINDOWS COMPILATION
+CC = gcc
+#sdl_mode: CFLAGS += -DWIN_MODE `pkg-config --cflags sdl2 SDL2_image SDL2_ttf`
+#sdl_mode: LDLIBS += `pkg-config --libs sdl2 SDL2_image SDL2_ttf`
+CFLAGS += -I Libs/SDL2_WIN_Include/include -I Libs/List -I Libs/Tuple -DWIN_MODE -DWIN32
+LDLIBS += -L Libs/SDL2_WIN_Include/lib -L Libs/List -L Libs/Tuple -lmingw32 -lSDL2 -lgdi32 -luser32 -lole32 -loleaut32 -lmingw32 -limm32 -lwinmm -lversion -lSetupAPI -lSDL2 -lSDL2_image -lSDL2_ttf -lfreetype -lcomdlg32
+
+#copy all file in Libs/BIN_SDL to bin folder
+win_mode: ${OBJ}
+	$(CC) $(CFLAGS) -o $(TARGET).exe $(OBJ) $(LDLIBS)
+	cp Libs/BIN_SDL/* $(OUTPUT)
+
+
+$(foreach f, $(TARGET), $(eval $(f):))
+
+-include ${DEP}
